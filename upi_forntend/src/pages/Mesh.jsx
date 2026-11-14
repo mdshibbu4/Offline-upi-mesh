@@ -15,7 +15,7 @@ const NODES = [
 
 export default function Mesh() {
   const { user } = useAuth();
-  const { browserOnline } = useNetwork();
+ const { browserOnline, online } = useNetwork();
   const [bridgeNet, setBridgeNet] = useState(true);
   const [packets, setPackets] = useState([]);
   const [log, setLog] = useState([]);
@@ -89,7 +89,7 @@ export default function Mesh() {
           {NODES.map((n, i) => {
             const here = packets.filter((p) => col(p) === i);
             const isBridge = n.key === "BRIDGE", isServer = n.key === "SERVER";
-            const up = isBridge ? bridgeNet : isServer ? true : i === 0 ? false : true;
+            const up = isBridge ? bridgeNet : isServer ? true : i === 0 ? online : true;
             return (
               <div key={n.key} className={`nodecard ${here.length ? "has" : ""} ${isBridge ? "gate" : ""}`}>
                 <div className="av">{n.icon}</div>
