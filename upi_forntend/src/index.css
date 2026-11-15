@@ -721,3 +721,19 @@ a {
   margin-bottom: 16px;
   font-weight: 600;
 }
+@media (max-width: 860px) {
+  .side { position: fixed; top: auto; bottom: 0; left: 0; right: 0; height: auto; z-index: 50;
+          padding: 6px 6px calc(6px + env(safe-area-inset-bottom)); gap: 2px;
+          overflow-x: auto; box-shadow: 0 -2px 12px rgba(0,0,0,.25); }
+  .side a, .side .out { flex-direction: column; gap: 2px; min-width: 68px; padding: 6px 4px;
+                        font-size: 11px; text-align: center; justify-content: center; }
+  .side a span { font-size: 20px; }
+  .main { padding: 12px 12px 90px; }
+  .hide-sm { display: none; }
+  .hello h1 { font-size: 24px; }
+  .balcard { width: 100%; min-width: 0; }
+  .balcard .big { font-size: 28px; }
+  .net { padding: 8px 12px; }
+  button, input { min-height: 44px; }
+  .hero .feat { display: none; }
+}

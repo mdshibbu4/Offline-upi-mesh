@@ -60,7 +60,7 @@ export default function Layout() {
             onClick={() => setSim(!simOffline)}
             title="Tap to simulate airplane mode"
           >
-            ● {online ? "Online" : "Offline"} (tap to switch)
+            ● {online ? "Online" : "Offline"} <span className="hide-sm">(tap to switch)</span>
           </button>
         </div>
         {!online && (
