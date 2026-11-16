@@ -725,9 +725,10 @@ a {
   .side { position: fixed; top: auto; bottom: 0; left: 0; right: 0; height: auto; z-index: 50;
           padding: 6px 6px calc(6px + env(safe-area-inset-bottom)); gap: 2px;
           overflow-x: auto; box-shadow: 0 -2px 12px rgba(0,0,0,.25); }
-  .side a, .side .out { flex-direction: column; gap: 2px; min-width: 68px; padding: 6px 4px;
-                        font-size: 11px; text-align: center; justify-content: center; }
-  .side a span { font-size: 20px; }
+   .side a, .side .out { flex: 0 0 auto; display: flex; flex-direction: column; align-items: center;
+                        justify-content: center; gap: 2px; min-width: 72px; padding: 6px 8px;
+                        font-size: 11px; text-align: center; white-space: nowrap; }
+  .side a span { display: block; font-size: 20px; line-height: 1; }
   .main { padding: 12px 12px 90px; }
   .hide-sm { display: none; }
   .hello h1 { font-size: 24px; }
